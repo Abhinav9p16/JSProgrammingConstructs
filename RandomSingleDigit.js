@@ -1,15 +1,33 @@
-let feet = 1;
-let inch = 1/12 * feet;
+let num1 = Math.floor(Math.random() * 900) + 100;
+let num2 = Math.floor(Math.random() * 900) + 100;
+let num3 = Math.floor(Math.random() * 900) + 100;
+let num4 = Math.floor(Math.random() * 900) + 100;
+let num5 = Math.floor(Math.random() * 900) + 100;
 
-let toFindFeet = 42 * inch;
-console.log("A: 42 inches = " + toFindFeet + " feet.");
+let min = num1;
+let max = num1;
 
-let length = 60;
-let breadth = 40;
-let areaOfOneInFeet = length * breadth;
-let areaOfOneInAcre = areaOfOneInFeet / 43560;
+if(num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5)
+    max = num1;
+else if(num2 > num3 && num2 > num4 && num2 > num5)
+    max = num2;
+else if(num3 > num4 && num3 > num5)
+    max = num3;
+else if(num4 > num5)
+    max = num4;
+else
+    max = num5;
 
-let areaOf25 = areaOfOneInAcre * 25;
+if(num1 < num2 && num1 < num3 && num1 < num4 && num1 < num5)
+    min = num1;
+else if(num2 < num3 && num2 < num4 && num2 < num5)
+    min = num2;
+else if(num3 < num4 && num3 < num5)
+    min = num3;
+else if(num4 < num5)
+    min = num4;
+else
+    min = num5;
 
-console.log("B: Area of One field in square foot: " + areaOfOneInFeet + ",  in acres: " + areaOfOneInAcre);
-console.log("C: Area of 25 such plots: " + areaOf25 + " acres");
+console.log("The Numbers Are: " + num1 + "  " + num2 + "  " + num3 + "  " + num4 + "  " + num5);
+console.log("Maximum: " + max + "   Minimum: " + min);
