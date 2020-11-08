@@ -1,6 +1,11 @@
-let num1 = Math.floor(Math.random()*10) % 6 + 1;
-let num2 = Math.floor(Math.random()*10) % 6 + 1;
+let num1 = Math.floor(Math.random() * 100);
+let num2 = Math.floor(Math.random() * 100);
+let num3 = Math.floor(Math.random() * 100);
+let num4 = Math.floor(Math.random() * 100);
+let num5 = Math.floor(Math.random() * 100);
 
-console.log("Number 1: "+num1);
-console.log("Numebr 2: "+num2);
-console.log("Sum of the two numbers: " + (num1+num2));
+let sum = (num1 + num2 + num3 + num4 + num5);
+let avg = sum/5;
+
+console.log("The Numbers are: " + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ", "+num5);
+console.log("SUM: " + sum + "   Average: " +avg);
