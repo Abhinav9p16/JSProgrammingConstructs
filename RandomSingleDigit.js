@@ -1,33 +1,29 @@
-let num1 = Math.floor(Math.random() * 900) + 100;
-let num2 = Math.floor(Math.random() * 900) + 100;
-let num3 = Math.floor(Math.random() * 900) + 100;
-let num4 = Math.floor(Math.random() * 900) + 100;
-let num5 = Math.floor(Math.random() * 900) + 100;
+var date1 = "03/20";
+var date2 = "06/20";
 
-let min = num1;
-let max = num1;
+const prompt = require('prompt-sync')();
 
-if(num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5)
-    max = num1;
-else if(num2 > num3 && num2 > num4 && num2 > num5)
-    max = num2;
-else if(num3 > num4 && num3 > num5)
-    max = num3;
-else if(num4 > num5)
-    max = num4;
+var date = prompt('Enter the date in MM/DD/YYYY format: ');
+let str1 = date1.split("/");
+let str2 = date2.split("/");
+let str3 = date.split("/");
+
+if(str1[0] <= str3[0] && str2[0] >= str3[0]){
+    if(str3[0] == str1[0]){
+        if(str3[1] > str1[1])
+            console.log("True");
+        else
+            console.log("False");
+    }
+    else if(str3[0] == str2[0]){
+        if(str3[1] < str2[1])
+            console.log("True");
+        else
+            console.log("False");
+    }
+
+    else
+        console.log("True");
+}
 else
-    max = num5;
-
-if(num1 < num2 && num1 < num3 && num1 < num4 && num1 < num5)
-    min = num1;
-else if(num2 < num3 && num2 < num4 && num2 < num5)
-    min = num2;
-else if(num3 < num4 && num3 < num5)
-    min = num3;
-else if(num4 < num5)
-    min = num4;
-else
-    min = num5;
-
-console.log("The Numbers Are: " + num1 + "  " + num2 + "  " + num3 + "  " + num4 + "  " + num5);
-console.log("Maximum: " + max + "   Minimum: " + min);
+    console.log("False");
