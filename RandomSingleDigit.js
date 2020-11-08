@@ -1,21 +1,8 @@
-const prompt = require('prompt-sync')();
+const HEAD = 1;
+const TAIL = 0;
 
-let year = prompt("Enter the year: ");
-let check_leap = false;
-if(year % 4 == 0){
-    if( year % 100 == 0){
-        if ( year % 400 == 0)
-            check_leap = true;
-        else
-            check_leap = false;
-        }
-    else
-        check_leap = true;
-    }
+let toss = Math.floor(Math.random() * 2) % 2;
+if(toss == TAIL)
+    console.log("TAIL")
 else
-    check_leap = false;
-
-if(check_leap)
-    console.log("The given year is a leap year.")
-else
-console.log("The given year is not a leap year.")
+    console.log("HEAD")
