@@ -1,11 +1,15 @@
-let num1 = Math.floor(Math.random() * 100);
-let num2 = Math.floor(Math.random() * 100);
-let num3 = Math.floor(Math.random() * 100);
-let num4 = Math.floor(Math.random() * 100);
-let num5 = Math.floor(Math.random() * 100);
+let feet = 1;
+let inch = 1/12 * feet;
 
-let sum = (num1 + num2 + num3 + num4 + num5);
-let avg = sum/5;
+let toFindFeet = 42 * inch;
+console.log("A: 42 inches = " + toFindFeet + " feet.");
 
-console.log("The Numbers are: " + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ", "+num5);
-console.log("SUM: " + sum + "   Average: " +avg);
+let length = 60;
+let breadth = 40;
+let areaOfOneInFeet = length * breadth;
+let areaOfOneInAcre = areaOfOneInFeet / 43560;
+
+let areaOf25 = areaOfOneInAcre * 25;
+
+console.log("B: Area of One field in square foot: " + areaOfOneInFeet + ",  in acres: " + areaOfOneInAcre);
+console.log("C: Area of 25 such plots: " + areaOf25 + " acres");
