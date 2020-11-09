@@ -1,47 +1,13 @@
 const prompt = require('prompt-sync')();
 
-let num1 = prompt("Enter the number between 0-9: ");
-switch(num1){
-    case 0:{
-        console.log("Zero");
-        break;
+let input1 = prompt("Enter a number : ");
+
+if(input1 == 0)
+    return console.log("Factorial : 1");
+else{
+    let fact = 1;
+    for(let i = 2; i <= input1; i++){
+        fact = fact * i;
     }
-    case 1:{
-        console.log("One");
-        break;
-    }
-    case 2:{
-        console.log("Two");
-        break;
-    }
-    case 3:{
-        console.log("Three");
-        break;
-    }
-    case 4:{
-        console.log("Four");
-        break;
-    }
-    case 5:{
-        console.log("Five");
-        break;
-    }
-    case 6:{
-        console.log("Six");
-        break;
-    }
-    case 7:{
-        console.log("Seven");
-        break;
-    }
-    case 8:{
-        console.log("Eight");
-        break;
-    }
-    case 9:{
-        console.log("Nine");
-        break;
-    }
-    default:
-        console.log("Wrong Input !")
+    console.log("Factorial : " + fact);
 }
