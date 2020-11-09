@@ -1,12 +1,10 @@
 const prompt = require('prompt-sync')();
+let num = prompt("Enter A Number: ");
 
-let input1 = prompt("Enter first number : ");
-let input2 = prompt("Enter last number : ");
-for(let j = input1; j <= input2; j++){
-    for(let i = 2 ; i <= Math.sqrt(j); i++){
-        if(j % i == 0){
-            console.log("Num: " + j + "   Not A Prime");
-        }
+console.log("Prime Factors of "+ num + " Are: ");
+for(let i = 2; i <= num; i++){
+    while(num % i == 0){
+        console.log("Factor: " + i);
+        num = num / i;
     }
 }
-console.log("Is A Prime Number");
