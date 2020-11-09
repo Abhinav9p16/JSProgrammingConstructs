@@ -1,13 +1,22 @@
-const prompt = require('prompt-sync')();
+const HEAD = 1;
+const TAIL = 0;
 
-let input1 = prompt("Enter a number : ");
+let win_Heads = 0;
+let win_Tails = 0;
 
-if(input1 == 0)
-    return console.log("Factorial : 1");
-else{
-    let fact = 1;
-    for(let i = 2; i <= input1; i++){
-        fact = fact * i;
+while(win_Heads != 11 && win_Tails != 11){
+    let toss = Math.floor(Math.random() * 2) % 2;
+    if(toss == TAIL){
+        console.log("TAIL");
+        win_Tails++;
     }
-    console.log("Factorial : " + fact);
+    else{
+        console.log("HEAD");
+        win_Heads++;
+    }
 }
+
+if(win_Heads == 1)
+    console.log("HEAD WINS..")
+else
+    console.log("TAIL WINS..")
