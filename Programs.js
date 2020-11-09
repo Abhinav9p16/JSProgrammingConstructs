@@ -1,17 +1,21 @@
 const prompt = require('prompt-sync')();
 
-let input = prompt("Enter a number between 1 and 100 : ");
-let upper = 100;
-let lower = 1;
-let mid = 0;
-while(mid != input){
-    mid  = (upper + lower) / 2;
-    if(input < mid){
-        upper = mid;
-    }
-    else{
-        lower = mid;
-    }
-}
+let num1 = prompt("Enter the first number:  ")
+let num2 = prompt("Enter the second number:  ")
 
-console.log(mid);
+if(num1.length != num2.length){
+    console.log("The two numbers are not palindromes")
+}
+else{
+    num1 = num1.split("")
+    num2 = num2.split("")
+
+    for(let i = 0; i < num1.length; i++){
+        if(num1[i] != num2[num2.length - 1 - i]){
+            console.log("The two numbers are not palindormes")
+            return;
+        }
+    }
+
+    console.log("The two numbers are palindromes")
+}
