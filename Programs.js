@@ -1,22 +1,19 @@
-const HEAD = 1;
-const TAIL = 0;
+let BET = 1;
+let WIN = 1;
+let stash = 100;
 
-let win_Heads = 0;
-let win_Tails = 0;
-
-while(win_Heads != 11 && win_Tails != 11){
-    let toss = Math.floor(Math.random() * 2) % 2;
-    if(toss == TAIL){
-        console.log("TAIL");
-        win_Tails++;
-    }
-    else{
-        console.log("HEAD");
-        win_Heads++;
+while (stash != 0 && stash != 200){
+    let choice = Math.floor(Math.random() * 2) % 2;
+    if(choice == BET){
+        let result = Math.floor(Math.random() * 2) % 2;
+        if(result == WIN)
+            stash++ ;
+        else
+            stash-- ;
     }
 }
 
-if(win_Heads == 1)
-    console.log("HEAD WINS..")
-else
-    console.log("TAIL WINS..")
+if(stash == 0)
+    console.log("The Gambler Lost !!")
+else if(stash == 200)
+    console.log("The Gambler Won !!")
